@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
+                echo "runing on ${env.GIT_BRANCH}"
             }
         }
         stage('Test') {
